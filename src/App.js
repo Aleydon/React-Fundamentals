@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /*Created by Roberto Aleydon*/
 
 import React from 'react';
@@ -14,35 +15,33 @@ import WhenUseFragment, {
   DontNeedFragment,
 } from './components/basics/Fragment';
 
-function App() {
-  return (
-    <div className="container">
-      <FirstComponentAnonymous />
-      <br />
-      <SecondComponent />
-      <br />
-      <ComponentWithJSX />
-      <br />
+// If you have a default export, it can be anonymous.
+// If the Arrow Function uses parentheses, there is no need to use the return.
+export default () => (
+  <div className="container">
+    <FirstComponentAnonymous />
+    <br />
+    <SecondComponent />
+    <br />
+    <ComponentWithJSX />
+    <br />
 
-      <FunctionWithParametersOne
-        title="Function"
-        subtitle="With Parameters/Props"
-      />
-      <br />
+    <FunctionWithParametersOne
+      title="Function"
+      subtitle="With Parameters/Props"
+    />
+    <br />
 
-      <FunctionWithParametersTwo
-        title="Unstructured Function"
-        subtitle="With Parameters/Props 2"
-        number={6}
-      />
-      <br />
+    <FunctionWithParametersTwo
+      title="Unstructured Function"
+      subtitle="With Parameters/Props 2"
+      number={6}
+    />
+    <br />
 
-      <WhenUseFragment />
-      <br />
-      <DontNeedFragment />
-      <br />
-    </div>
-  );
-}
-
-export default App;
+    <WhenUseFragment />
+    <br />
+    <DontNeedFragment />
+    <br />
+  </div>
+);
