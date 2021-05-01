@@ -14,6 +14,7 @@ import FunctionWithParametersOne, {
 import WhenUseFragment, {
   DontNeedFragment,
 } from './components/basics/Fragment';
+import RandomNumber from './components/basics/RandomNumber';
 
 // If you have a default export, it can be anonymous.
 // If the Arrow Function uses parentheses, there is no need to use the return.
@@ -43,5 +44,7 @@ export default () => (
     <br />
     <DontNeedFragment />
     <br />
+
+    <RandomNumber min={4} max={15} />
   </div>
 );
