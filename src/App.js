@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+/*Created by Roberto Aleydon*/
+
+import React from 'react';
+
+import './style.css';
+
+import FirstComponentAnonymous from './components/basics/FirstComponent';
+import { SecondComponent } from './components/basics/FirstComponent';
+import ComponentWithJSX from './components/basics/ComponentWithJSX';
+import FunctionWithParametersOne, {
+  FunctionWithParametersTwo,
+} from './components/basics/FunctionWithParameters';
+import WhenUseFragment, {
+  DontNeedFragment,
+} from './components/basics/Fragment';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <FirstComponentAnonymous />
+      <br />
+      <SecondComponent />
+      <br />
+      <ComponentWithJSX />
+      <br />
+
+      <FunctionWithParametersOne
+        title="Function"
+        subtitle="With Parameters/Props"
+      />
+      <br />
+
+      <FunctionWithParametersTwo
+        title="Unstructured Function"
+        subtitle="With Parameters/Props 2"
+        number={6}
+      />
+      <br />
+
+      <WhenUseFragment />
+      <br />
+      <DontNeedFragment />
+      <br />
     </div>
   );
 }
