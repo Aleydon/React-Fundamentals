@@ -7,9 +7,9 @@ export default (props) => {
 
   return (
     <>
-      <h4>minimum value: {min}</h4>
-      <h4>maximum value: {max}</h4>
-      <h3>chosen value among them: {random}</h3>
+      <p>minimum value: {min}</p>
+      <p>maximum value: {max}</p>
+      <p>chosen value among them: {random}</p>
     </>
   );
 };

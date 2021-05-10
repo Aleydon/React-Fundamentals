@@ -4,14 +4,14 @@ export default function FunctionWithParametersOne(props) {
   const sub = props.subtitle;
   return (
     <>
-      <h1>{props.title}</h1>
-      <h5>{sub}</h5>
+      <p>{sub}</p>
+      <p>{'function example(props){props.sub}'}</p>
     </>
   );
 }
 
 // getting props using unstructured params
-export function FunctionWithParametersTwo({ title, subtitle, number }) {
+export function FunctionWithParametersTwo({ title, number }) {
   const status =
     number < 10
       ? 'The number is less than 10'
@@ -19,9 +19,10 @@ export function FunctionWithParametersTwo({ title, subtitle, number }) {
 
   return (
     <>
-      <h1>{title}</h1>
-      <h4>{subtitle}</h4>
-      <h5>{status}</h5>
+      <p>
+        {title}: <span>{'function example({prop1, prop2}){}'}</span>
+      </p>
+      <p>Prop number: {status}</p>
     </>
   );
 }
