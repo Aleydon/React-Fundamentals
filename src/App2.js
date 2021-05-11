@@ -6,6 +6,7 @@ import FunctionWithParameters, {
 import Card from './components/layout/Card';
 import ComponentWithChildren from './components/basics/ComponentWithChildren';
 import ChildrenOfComponent from './components/basics/ChildrenOfComponent';
+import List from './components/basics/List';
 
 import './style.css';
 
@@ -40,6 +41,15 @@ function App() {
           <ChildrenOfComponent firstName="Josh" lastName="Aleydon" />
           <ChildrenOfComponent firstName="Maria" lastName="Eduarda" />
         </ComponentWithChildren>
+      </Card>
+
+      <br />
+
+      <Card
+        color="#FF69B4"
+        title="listing products from the array using the .map()"
+      >
+        <List />
       </Card>
     </div>
   );
