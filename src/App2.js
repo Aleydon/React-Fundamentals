@@ -4,6 +4,8 @@ import FunctionWithParameters, {
   FunctionWithParametersTwo,
 } from './components/basics/FunctionWithParameters';
 import Card from './components/layout/Card';
+import ComponentWithChildren from './components/basics/ComponentWithChildren';
+import ChildrenOfComponent from './components/basics/ChildrenOfComponent';
 
 import './style.css';
 
@@ -30,6 +32,14 @@ function App() {
         <FunctionWithParameters subtitle="Getting prop subtitle" />
         <hr />
         <FunctionWithParametersTwo title="Desestructuring props" number={2} />
+      </Card>
+
+      <Card color="#f00" title="Component with children">
+        <ComponentWithChildren>
+          <ChildrenOfComponent firstName="Roberto" lastName="Aleydon" />
+          <ChildrenOfComponent firstName="Josh" lastName="Aleydon" />
+          <ChildrenOfComponent firstName="Maria" lastName="Eduarda" />
+        </ComponentWithChildren>
       </Card>
     </div>
   );
